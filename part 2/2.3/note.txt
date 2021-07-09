@@ -1,0 +1,24 @@
+In the docker-compose file, I am making use of the images that were already defined in part 1.
+It is also possible to define a new set entirely, like that:
+
+
+version: '3.5'
+
+services:
+
+    frontend:
+      image: example-frontend
+      environment:
+        - REACT_APP_BACKEND_URL=http://localhost:8000
+      ports:
+        - 5000:5000
+      command: ["serve", "-s", "-l", "5000", "build"]
+
+    backend:
+      image: example-backend
+      environment:
+        - REQUEST_ORIGIN=http://localhost:5000
+      ports:
+        - 8000:8000
+      command: ["./server"]
+

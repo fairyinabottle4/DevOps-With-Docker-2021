@@ -1,0 +1,3 @@
+I did not manage to complete this exercise, because there was no suitable tensorflow library found(possibly because I am using an M1 Macbook that uses arm64 architecture). However, I am confident that my docker-compose.yml file is correct.
+
+The main takeaway from this exercise is how to build with github repositories, as up to this point only docker images had been used. You need to first clone the relevant repos into the root folder and then pass the file reference of the local repos into the build under service.

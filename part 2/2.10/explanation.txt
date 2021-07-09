@@ -1,0 +1,13 @@
+Problem: The way the CORS was set up was such that it only accepted requests from port 5000. By eliminating that, we can now accept requests from any port number, allowing out reverse proxy to function.
+
+Steps taken:
+
+1) In the material-applications folder, the Dockerfile for the example-backend application was changed and ENV REQUEST_ORIGIN=http://localhost was set instead of ENV REQUEST_ORIGIN=http://localhost:5000
+
+2) Build with the command docker build . -t 2.10-backend
+
+
+
+In docker-compose.yml, basically the changes from 2.8 and 2.9 were added together
+
+NOTE TO SELF: When I was doing this exercise, I spent a lot of time wondering why I could not build the new backend. Turns out, you need to go into the cloned material-applications repo and make the changes to the Dockerfile there and build it. You cannot build it anywhere else. The dockerfile in this folder was copied from that material-applications folder. 
