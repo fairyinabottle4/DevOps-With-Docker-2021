@@ -1,0 +1,1 @@
+Because I am not pulling from ubuntu:18.04, that could be the reason why there is no change in the size of the image

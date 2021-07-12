@@ -1,0 +1,1 @@
+I skipped exercise 3.5 because I already used node-alpine in the frontend and golang in parts 3.4 and before
